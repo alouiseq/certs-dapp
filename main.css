@@ -1,0 +1,13 @@
+#certs {
+  margin-top: 20px;
+}
+
+.certs-dropdown {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.blockchain-certs {
+  margin-top: 30px;
+  margin-left: 0;
+}
