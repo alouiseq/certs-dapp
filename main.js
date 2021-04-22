@@ -15,23 +15,22 @@ async function logOut() {
   document.getElementById("certs").style.display = "none";
 }
 
-async function flip(side) {
-  const amount = document.getElementById("amount").value;
-  console.log(side + " " + amount);
-
-  // window.web3 = await Moralis.Web3.enable();
-  // let contractInstance = new web3.eth.Contract(window.abi, "<address>");
-}
-
 async function setCert() {
   console.log("Sending cert to the smart contract...");
   window.web3 = await Moralis.Web3.enable();
   let contractInstance = new web3.eth.Contract(
     window.abi,
-    "0x0846391d2E06bADdc836349ECD252c372181d8ec"
+    "0x399fDF4BE3e68658E5BA60cd7D7b923F67a8b722"
   );
   contractInstance.methods
-    .addStudent("Steph", "Curry")
+    .addStudentCert(
+      "Steph",
+      "Curry",
+      "Pathstream",
+      "Unity VR",
+      "Congrats yo!",
+      "4-24-21"
+    )
     .send({ value: 100, from: ethereum.selectedAddress })
     .on("receipt", function (receipt) {
       console.log("RECEIPT: ", receipt);

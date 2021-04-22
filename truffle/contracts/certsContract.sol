@@ -1,42 +1,30 @@
 import "../node_modules/@openzeppelin/contracts/access/Ownable.sol";
-// import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 pragma solidity ^0.8.0;
 
 contract CertsContract is Ownable {
-// contract CertsContract {
     uint public ContractBalance;
-    // address public owner = msg.sender;
     uint256 public studentCount = 0;
-    mapping(uint => Student) public students;
+    mapping(uint => StudentCert) public students;
 
     event funded(address owner, uint funding);
+    event certAdded(StudentCert student);
     
-    struct Student {
-        uint _id;
-        string _firstName;
-        string _lastName;
-    }
-
     struct StudentCert {
         uint _studentId;
+        string _firstName;
+        string _lastName;
         string _university;
         string _program;
         string _description;
         string _date;
     }
 
-//   modifier onlyOwner() {
-//     require(
-//       msg.sender == owner,
-//       "This function is restricted to the contract's owner"
-//     );
-//     _;
-//   }
-
-    function addStudent(string memory firstName, string memory lastName) public payable {
+    function addStudentCert(string memory firstName, string memory lastName, string memory university, string memory program, string memory description, string memory date) public payable {
         incrementCount();
-        students[studentCount] = Student(studentCount, firstName, lastName);
+        ContractBalance += msg.value;
+        students[studentCount] = StudentCert(studentCount, firstName, lastName, university, program, description, date);
+        emit certAdded(students[studentCount]);
     }
 
     function incrementCount() internal {
