@@ -1,13 +1,27 @@
+.top-nav {
+  height: 80px;
+}
+
 #certs {
   margin-top: 20px;
 }
 
-.certs-dropdown {
-  display: inline-block;
-  margin-right: 10px;
+.asana {
+  background-color: orange;
 }
 
-.blockchain-certs {
-  margin-top: 30px;
-  margin-left: 0;
+.facebook {
+  background-color: blue;
+}
+
+.salesforce {
+  background-color: lightblue;
+}
+
+.tableau {
+  background-color: purple;
+}
+
+.card-text {
+  font-weight: bold;
 }

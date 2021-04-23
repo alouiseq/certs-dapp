@@ -30,13 +30,7 @@ window.abi = [
       {
         indexed: false,
         internalType: "string",
-        name: "firstName",
-        type: "string",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "lastName",
+        name: "student",
         type: "string",
       },
       {
@@ -54,7 +48,7 @@ window.abi = [
       {
         indexed: false,
         internalType: "string",
-        name: "description",
+        name: "cert",
         type: "string",
       },
       {
@@ -152,12 +146,7 @@ window.abi = [
       },
       {
         internalType: "string",
-        name: "_firstName",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "_lastName",
+        name: "student",
         type: "string",
       },
       {
@@ -172,7 +161,7 @@ window.abi = [
       },
       {
         internalType: "string",
-        name: "_description",
+        name: "_cert",
         type: "string",
       },
       {
@@ -202,12 +191,7 @@ window.abi = [
     inputs: [
       {
         internalType: "string",
-        name: "firstName",
-        type: "string",
-      },
-      {
-        internalType: "string",
-        name: "lastName",
+        name: "student",
         type: "string",
       },
       {
@@ -222,7 +206,7 @@ window.abi = [
       },
       {
         internalType: "string",
-        name: "description",
+        name: "cert",
         type: "string",
       },
       {

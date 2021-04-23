@@ -14,41 +14,83 @@
     <script type="text/javascript" src="./abi.js"></script>
   </head>
   <body>
-    <h1>Aggregate of a Student's Certificates</h1>
-    <button id="btn-login">Login to Metamask</button>
-    <button id="btn-logout">Logout</button>
-
+    <div class="top-nav">
+      <img
+        src="/assets/images/pathstream-logo.png"
+        alt="Pathstream Logo"
+        height="64"
+        width="300"
+      />
+    </div>
     <div class="container">
-      <div id="certs" style="display: none">
-        <div class="dropdown certs-dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            My Pathstream Certificates
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a class="dropdown-item" href="#">Facebook Digital Marketing</a>
-            </li>
-            <li><a class="dropdown-item" href="#">Unity 3D VR</a></li>
-            <li><a class="dropdown-item" href="#">Salesforce Admin</a></li>
-            <li>
-              <a class="dropdown-item" href="#">Asana Project Management</a>
-            </li>
-          </ul>
-        </div>
-        <button id="sc-btn">Put my certificate on the blockchain!</button>
-        {# <input type="number" id="amount" />
-        <button id="heads-btn">Play Heads</button>
-        <button id="tails-btn">Play Tails</button> #}
+      <h1>My Certificates</h1>
+      <button id="btn-login">Login to Metamask</button>
+      <button id="btn-logout">Logout</button>
 
-        <div class="blockchain-certs">
-          <h2>View my certificates on the blockchain</h2>
-          <div class="certs-view"></div>
+      <div id="certs" style="display: none">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card asana">
+              <img
+                src="/assets/images/harvard_asana_cert.png"
+                class="card-img-top"
+                alt="harvard-asana-cert"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Harvard Asana Project Management Certificate
+                </p>
+                <button id="asana-btn">Blockchain &rarr;</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card facebook">
+              <img
+                src="/assets/images/harvard_facebook.png"
+                class="card-img-top"
+                alt="harvard-facebook-cert"
+                height="260"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Harvard The Facebook Digital Marketing Certificate
+                </p>
+                <button id="facebook-btn">Blockchain &rarr;</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card salesforce">
+              <img
+                src="/assets/images/harvard_salesforce_cert.png"
+                class="card-img-top"
+                alt="harvard-salesforce-cert"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Harvard Salesforce Administrator Career Certificate
+                </p>
+                <button id="saleforce-btn">Blockchain &rarr;</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card tableau">
+              <img
+                src="/assets/images/harvard_tableau_cert.jpeg"
+                class="card-img-top"
+                alt="harvard-tableau-cert"
+                height="260"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Harvard Tableau Data and Business Analytics Certificate
+                </p>
+                <button id="tableau-btn">Blockchain &rarr;</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -9,24 +9,23 @@ contract CertsContract is Ownable {
 
     event funded(address owner, uint funding);
     // event certAdded(StudentCert student);
-    event certAdded(uint studeintId, string firstName, string lastName, string university, string program, string description, string date);
+    event certAdded(uint studeintId, string student, string university, string program, string cert, string date);
     
     struct StudentCert {
         uint _studentId;
-        string _firstName;
-        string _lastName;
+        string student;
         string _university;
         string _program;
-        string _description;
+        string _cert;
         string _date;
     }
 
-    function addStudentCert(string memory firstName, string memory lastName, string memory university, string memory program, string memory description, string memory date) public payable {
+    function addStudentCert(string memory student, string memory university, string memory program, string memory cert, string memory date) public payable {
         incrementCount();
         ContractBalance += msg.value;
-        students[studentCount] = StudentCert(studentCount, firstName, lastName, university, program, description, date);
+        students[studentCount] = StudentCert(studentCount, student, university, program, cert, date);
         // emit certAdded(students[studentCount]);
-        emit certAdded(studentCount, firstName, lastName, university, program, description, date);
+        emit certAdded(studentCount, student, university, program, cert, date);
     }
 
     // function incrementCount() internal {
