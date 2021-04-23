@@ -22,47 +22,46 @@ window.abi = [
     anonymous: false,
     inputs: [
       {
-        components: [
-          {
-            internalType: "uint256",
-            name: "_studentId",
-            type: "uint256",
-          },
-          {
-            internalType: "string",
-            name: "_firstName",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "_lastName",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "_university",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "_program",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "_description",
-            type: "string",
-          },
-          {
-            internalType: "string",
-            name: "_date",
-            type: "string",
-          },
-        ],
         indexed: false,
-        internalType: "struct CertsContract.StudentCert",
-        name: "student",
-        type: "tuple",
+        internalType: "uint256",
+        name: "studeintId",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "firstName",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "lastName",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "university",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "program",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "description",
+        type: "string",
+      },
+      {
+        indexed: false,
+        internalType: "string",
+        name: "date",
+        type: "string",
       },
     ],
     name: "certAdded",
@@ -237,6 +236,13 @@ window.abi = [
     stateMutability: "payable",
     type: "function",
     payable: true,
+  },
+  {
+    inputs: [],
+    name: "incrementCount",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
   },
   {
     inputs: [],

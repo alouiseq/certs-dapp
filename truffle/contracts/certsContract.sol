@@ -8,7 +8,8 @@ contract CertsContract is Ownable {
     mapping(uint => StudentCert) public students;
 
     event funded(address owner, uint funding);
-    event certAdded(StudentCert student);
+    // event certAdded(StudentCert student);
+    event certAdded(uint studeintId, string firstName, string lastName, string university, string program, string description, string date);
     
     struct StudentCert {
         uint _studentId;
@@ -24,13 +25,15 @@ contract CertsContract is Ownable {
         incrementCount();
         ContractBalance += msg.value;
         students[studentCount] = StudentCert(studentCount, firstName, lastName, university, program, description, date);
-        emit certAdded(students[studentCount]);
+        // emit certAdded(students[studentCount]);
+        emit certAdded(studentCount, firstName, lastName, university, program, description, date);
     }
 
-    function incrementCount() internal {
+    // function incrementCount() internal {
+    function incrementCount() public {
         studentCount += 1;
     }
-
+    
     // Function to get the Balance of the Contract
     function getBalance() public view returns (uint) {
         return ContractBalance;

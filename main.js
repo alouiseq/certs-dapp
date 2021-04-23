@@ -20,18 +20,18 @@ async function setCert() {
   window.web3 = await Moralis.Web3.enable();
   let contractInstance = new web3.eth.Contract(
     window.abi,
-    "0x399fDF4BE3e68658E5BA60cd7D7b923F67a8b722"
+    "0x20eA1C6428fe4A9e22427457FEa7659457354f79"
   );
   contractInstance.methods
     .addStudentCert(
-      "Steph",
-      "Curry",
+      "Kramer",
+      "Watson",
       "Pathstream",
-      "Unity VR",
+      "AR",
       "Congrats yo!",
       "4-24-21"
     )
-    .send({ value: 100, from: ethereum.selectedAddress })
+    .send({ value: 1000000000000000000, from: ethereum.selectedAddress })
     .on("receipt", function (receipt) {
       console.log("RECEIPT: ", receipt);
     });
@@ -39,6 +39,4 @@ async function setCert() {
 
 document.getElementById("btn-login").onclick = logIn;
 document.getElementById("btn-logout").onclick = logOut;
-// document.getElementById("heads-btn").onclick = () => flip("heads");
-// document.getElementById("tails-btn").onclick = () => flip("tails");
 document.getElementById("sc-btn").onclick = setCert;
